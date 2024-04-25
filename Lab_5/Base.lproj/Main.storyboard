@@ -22,6 +22,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="0UO-Y1-IAA" kind="relationship" relationship="viewControllers" id="fzK-W8-mCw"/>
+                        <segue destination="AQ8-xC-xBl" kind="relationship" relationship="viewControllers" id="zNg-E5-Yl8"/>
                         <segue destination="e0C-uW-rfn" kind="relationship" relationship="viewControllers" id="Y9H-tT-QQl"/>
                         <segue destination="Iev-f2-g97" kind="relationship" relationship="viewControllers" id="97Z-IT-KMf"/>
                     </connections>
@@ -120,6 +121,26 @@ Photogenic: Turn your photos into works of art.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ic2-Cz-ZcZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1020.6106870229007" y="-111.26760563380282"/>
+        </scene>
+        <!--Authentication-->
+        <scene sceneID="hWA-sa-v2Y">
+            <objects>
+                <viewController title="Authentication" interactionActivityTrackingBaseName="Authentication" id="AQ8-xC-xBl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="AuthenticationViewController" id="Qy9-uH-58F" customClass="AuthenticationViewController" customModule="Lab_5" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YjE-kC-v70"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="AuthenticationViewController" label="AuthenticationViewController">
+                            <accessibilityTraits key="traits" button="YES" image="YES" keyboardKey="YES" staticText="YES" searchField="YES" allowsDirectInteraction="YES" causesPageTurn="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Authentication" id="KW6-Ak-oGb" userLabel="Authentication"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2c-dd-qON" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="115" y="-1226"/>
         </scene>
         <!--Welcome page-->
         <scene sceneID="bLO-ll-UqE">
@@ -232,25 +253,16 @@ Photogenic: Turn your photos into works of art.</string>
         <scene sceneID="Tr3-9p-IQW">
             <objects>
                 <viewController storyboardIdentifier="SearchPhotoViewController" modalPresentationStyle="fullScreen" id="Wqb-SJ-D7z" customClass="SearchPhotoViewController" customModule="Lab_5" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="RCl-Ry-eqw">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RCl-Ry-eqw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUw-UY-iAb">
-                                <rect key="frame" x="0.0" y="95" width="393" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="RCl-Ry-eqw" id="qxr-Zx-TBV"/>
-                                </connections>
-                            </searchBar>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0CZ-qf-owL"/>
+                        <keyboardLayoutGuide key="keyboard" id="lTj-li-oV5"/>
                         <color key="backgroundColor" red="0.12738141150000001" green="0.13536942399999999" blue="0.18637242270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES" link="YES" image="YES" selected="YES" keyboardKey="YES" staticText="YES" updatesFrequently="YES" searchField="YES" startsMediaSession="YES" adjustable="YES" allowsDirectInteraction="YES" causesPageTurn="YES" header="YES"/>
+                        </accessibility>
                     </view>
-                    <connections>
-                        <outlet property="searchbar" destination="kUw-UY-iAb" id="GoE-OX-sfI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnb-hV-nvm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -330,6 +342,9 @@ Photogenic: Turn your photos into works of art.</string>
         <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

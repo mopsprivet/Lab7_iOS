@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		453488712BCDC55400FDB5F9 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488702BCDC55400FDB5F9 /* ImageCollectionViewCell.swift */; };
+		453488822BDA944900FDB5F9 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488812BDA944900FDB5F9 /* AuthenticationViewController.swift */; };
+		453488852BDA971A00FDB5F9 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488842BDA971A00FDB5F9 /* AuthHeaderView.swift */; };
+		453488882BDA9D5700FDB5F9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488872BDA9D5700FDB5F9 /* LoginController.swift */; };
+		4534888F2BDAA40F00FDB5F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4534888E2BDAA40F00FDB5F9 /* logo.png */; };
+		453488912BDAA84000FDB5F9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488902BDAA84000FDB5F9 /* CustomTextField.swift */; };
+		453488932BDAB20600FDB5F9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488922BDAB20600FDB5F9 /* CustomButton.swift */; };
 		45A2350E2BB038C30010365C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2350D2BB038C30010365C /* AppDelegate.swift */; };
 		45A235102BB038C30010365C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2350F2BB038C30010365C /* SceneDelegate.swift */; };
 		45A235122BB038C30010365C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A235112BB038C30010365C /* ViewController.swift */; };
@@ -45,6 +51,13 @@
 
 /* Begin PBXFileReference section */
 		453488702BCDC55400FDB5F9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 1; };
+		4534887E2BDA905400FDB5F9 /* age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age.png; sourceTree = "<group>"; };
+		453488812BDA944900FDB5F9 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		453488842BDA971A00FDB5F9 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		453488872BDA9D5700FDB5F9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		4534888E2BDAA40F00FDB5F9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
+		453488902BDAA84000FDB5F9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		453488922BDAB20600FDB5F9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		45A2350A2BB038C30010365C /* Lab_5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab_5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A2350D2BB038C30010365C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A2350F2BB038C30010365C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,9 +105,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		453488732BCFF8BC00FDB5F9 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				4534887E2BDA905400FDB5F9 /* age.png */,
+				4534888E2BDAA40F00FDB5F9 /* logo.png */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		453488832BDA96F400FDB5F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				453488842BDA971A00FDB5F9 /* AuthHeaderView.swift */,
+				453488902BDAA84000FDB5F9 /* CustomTextField.swift */,
+				453488922BDAB20600FDB5F9 /* CustomButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		453488862BDA9D3500FDB5F9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				453488812BDA944900FDB5F9 /* AuthenticationViewController.swift */,
+				453488872BDA9D5700FDB5F9 /* LoginController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		45A235012BB038C20010365C = {
 			isa = PBXGroup;
 			children = (
+				453488732BCFF8BC00FDB5F9 /* Photos */,
 				45A2350C2BB038C30010365C /* Lab_5 */,
 				45A235232BB038CF0010365C /* Lab_5Tests */,
 				45A2352D2BB038CF0010365C /* Lab_5UITests */,
@@ -115,6 +157,8 @@
 		45A2350C2BB038C30010365C /* Lab_5 */ = {
 			isa = PBXGroup;
 			children = (
+				453488862BDA9D3500FDB5F9 /* Auth */,
+				453488832BDA96F400FDB5F9 /* View */,
 				45A2350D2BB038C30010365C /* AppDelegate.swift */,
 				45A2350F2BB038C30010365C /* SceneDelegate.swift */,
 				45A235112BB038C30010365C /* ViewController.swift */,
@@ -260,6 +304,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4534888F2BDAA40F00FDB5F9 /* logo.png in Resources */,
 				45A235172BB038CE0010365C /* Assets.xcassets in Resources */,
 				45A2351A2BB038CE0010365C /* Base in Resources */,
 				45A235152BB038C30010365C /* Base in Resources */,
@@ -287,8 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453488912BDAA84000FDB5F9 /* CustomTextField.swift in Sources */,
 				45A235122BB038C30010365C /* ViewController.swift in Sources */,
+				453488882BDA9D5700FDB5F9 /* LoginController.swift in Sources */,
 				45F1B9732BC30F9A00747E66 /* SearchPhotoViewController.swift in Sources */,
+				453488932BDAB20600FDB5F9 /* CustomButton.swift in Sources */,
+				453488822BDA944900FDB5F9 /* AuthenticationViewController.swift in Sources */,
+				453488852BDA971A00FDB5F9 /* AuthHeaderView.swift in Sources */,
 				45EEAEF52BB0AF7B007C06B8 /* PhotoSelectionViewController.swift in Sources */,
 				45EEAEF12BB0691F007C06B8 /* ViewController2.swift in Sources */,
 				45EEAEF72BB0DB6D007C06B8 /* GalleryViewController.swift in Sources */,

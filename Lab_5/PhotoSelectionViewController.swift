@@ -69,6 +69,6 @@ class PhotoSelectionViewController: UIViewController, UIImagePickerControllerDel
         nextButton.isHidden = true
     }
     
-    
-    
 }
+
+

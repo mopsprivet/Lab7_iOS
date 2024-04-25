@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 struct APIResponse: Codable {
     let total: Int
@@ -12,28 +13,37 @@ struct Result: Codable {
 }
 
 struct URLs: Codable {
-    let full: String
+    //let full: String
     let regular: String
 }
 
+
 class SearchPhotoViewController: UIViewController, UICollectionViewDataSource, UISearchBarDelegate {
-    
+        
     //let urlString = "https://api.unsplash.com/search/photos?page=1&query=office&client_id=ig6Hg1UfpgHgFLwt0eJpwSF6EeDlpYq8YIMxymfi4-o"
     
     private var collectionView: UICollectionView?
     
     var results: [Result] = []
     
-    @IBOutlet var searchbar: UISearchBar!
-    //let searchbar = UISearchBar()
-
+    //@IBOutlet var searchbar: UISearchBar!
+    let searchbar = UISearchBar()
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
+        self.view.backgroundColor = #colorLiteral(red: 0.1255135536, green: 0.135696739, blue: 0.1907175183, alpha: 1)
+
         super.viewDidLoad()
         searchbar.delegate = self
         view.addSubview(searchbar)
+        searchbar.isHidden = false
+
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 0
         layout.itemSize = CGSize(width: view.frame.size.width/2, height: view.frame.size.width/2)
         
@@ -54,26 +64,16 @@ class SearchPhotoViewController: UIViewController, UICollectionViewDataSource, U
         print("viewDidLayoutSubviews done")
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if !results.isEmpty {
-            print("collectionView Good")
-            return results.count
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        if let text = searchbar.text {
+            results = []
+            collectionView?.reloadData()
+            fetchPhotos(query: text)
+            print("searchBarSearchButtonClicked works")
         } else {
-            print("collectionView Doesn't work")
-            return 0
+            print("searchBarSearchButtonClicked doesn't work")
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let imageURLString = results[indexPath.row].urls.full
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else {
-            print("Could not dequeue cell for indexPath: \(indexPath)")
-            return UICollectionViewCell()
-        }
-        
-        cell.configure(with: imageURLString)
-        print("Cell configured for indexPath: \(indexPath)")
-        return cell
     }
     
     func fetchPhotos(query: String) {
@@ -83,14 +83,14 @@ class SearchPhotoViewController: UIViewController, UICollectionViewDataSource, U
             return
         }
         print("Data request started")
-
+        
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
             guard let data = data, error == nil else {
                 print("Data task error:", error?.localizedDescription ?? "Unknown error")
                 return
             }
             print("Data received!")
-
+            
             do {
                 let jsonResult = try JSONDecoder().decode(APIResponse.self, from: data)
                 print("Number of results:", jsonResult.results.count)
@@ -104,20 +104,31 @@ class SearchPhotoViewController: UIViewController, UICollectionViewDataSource, U
                 print("Doesn't work")
             }
         }
-
+        
         task.resume()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchBar.resignFirstResponder()
-        if let text = searchbar.text {
-            results = []
-            collectionView?.reloadData()
-            fetchPhotos(query: text)
-            print("searchBarSearchButtonClicked works")
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if !results.isEmpty {
+            print("collectionView Good")
+            return results.count
         } else {
-            print("searchBarSearchButtonClicked doesn't work")
+            print("collectionView Doesn't work")
+            return 0
         }
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let imageURLString = results[indexPath.row].urls.regular
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ImageCollectionViewCell.identifier, for: indexPath) as? ImageCollectionViewCell else {
+            print("Could not dequeue cell for indexPath: \(indexPath)")
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(with: imageURLString)
+        print("Cell configured for indexPath: \(indexPath)")
+        return cell
+    }
+    
 }
