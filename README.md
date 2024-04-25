@@ -1,2 +1,2 @@
-# Lab7_iOS
-Lab 7
+# Lab8_iOS
+Lab 8
