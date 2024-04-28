@@ -9,7 +9,7 @@ class LoginController: UIViewController {
     private let passwordField = CustomTextField(fieldType: .password)
         
     private let signInButton = CustomButton(title: "Sign In", hasBackground: true, fontSize: .med)
-    private let newUserButton = CustomButton(title: "Sign Up", fontSize: .med)
+    private let newUserButton = CustomButton(title: "New User? Sign Up", fontSize: .med)
     private let forgotPasswordButton = CustomButton(title: "Forgot Password?", fontSize: .small)
 
 
@@ -22,10 +22,12 @@ class LoginController: UIViewController {
         self.forgotPasswordButton.addTarget(self, action: #selector(didTapForgotPassword), for: .touchUpInside)
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
         
+        //self.didTapNewUser()
     }
     
     
@@ -81,13 +83,21 @@ class LoginController: UIViewController {
             // MARK: - Selectors
             @objc private func didTapSignIn() {
                 print("DEBUG PRINT:", "didTapSignIn")
+                let vc = AuthenticationViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: false, completion: nil)
             }
             
             @objc private func didTapNewUser() {
                 print("DEBUG PRINT:", "didTapNewUser")
+                let vc = RegisterController()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             
             @objc private func didTapForgotPassword() {
                 print("DEBUG PRINT:", "didTapForgotPassword")
+                let vc = ForgotPasswordController()
+                self.navigationController?.pushViewController(vc, animated: true)
+
             }
 }

@@ -14,6 +14,9 @@
 		4534888F2BDAA40F00FDB5F9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4534888E2BDAA40F00FDB5F9 /* logo.png */; };
 		453488912BDAA84000FDB5F9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488902BDAA84000FDB5F9 /* CustomTextField.swift */; };
 		453488932BDAB20600FDB5F9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488922BDAB20600FDB5F9 /* CustomButton.swift */; };
+		453488952BDE95D700FDB5F9 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488942BDE95D700FDB5F9 /* ForgotPasswordController.swift */; };
+		453488972BDE961E00FDB5F9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488962BDE961E00FDB5F9 /* RegisterController.swift */; };
+		453488992BDEADBC00FDB5F9 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453488982BDEADBC00FDB5F9 /* WebViewerController.swift */; };
 		45A2350E2BB038C30010365C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2350D2BB038C30010365C /* AppDelegate.swift */; };
 		45A235102BB038C30010365C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A2350F2BB038C30010365C /* SceneDelegate.swift */; };
 		45A235122BB038C30010365C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A235112BB038C30010365C /* ViewController.swift */; };
@@ -51,13 +54,15 @@
 
 /* Begin PBXFileReference section */
 		453488702BCDC55400FDB5F9 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; tabWidth = 4; wrapsLines = 1; };
-		4534887E2BDA905400FDB5F9 /* age.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = age.png; sourceTree = "<group>"; };
 		453488812BDA944900FDB5F9 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		453488842BDA971A00FDB5F9 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 		453488872BDA9D5700FDB5F9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		4534888E2BDAA40F00FDB5F9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../../Downloads/logo.png; sourceTree = "<group>"; };
 		453488902BDAA84000FDB5F9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		453488922BDAB20600FDB5F9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		453488942BDE95D700FDB5F9 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		453488962BDE961E00FDB5F9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		453488982BDEADBC00FDB5F9 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
 		45A2350A2BB038C30010365C /* Lab_5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lab_5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45A2350D2BB038C30010365C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45A2350F2BB038C30010365C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,7 +113,6 @@
 		453488732BCFF8BC00FDB5F9 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
-				4534887E2BDA905400FDB5F9 /* age.png */,
 				4534888E2BDAA40F00FDB5F9 /* logo.png */,
 			);
 			path = Photos;
@@ -129,6 +133,9 @@
 			children = (
 				453488812BDA944900FDB5F9 /* AuthenticationViewController.swift */,
 				453488872BDA9D5700FDB5F9 /* LoginController.swift */,
+				453488942BDE95D700FDB5F9 /* ForgotPasswordController.swift */,
+				453488962BDE961E00FDB5F9 /* RegisterController.swift */,
+				453488982BDEADBC00FDB5F9 /* WebViewerController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -342,7 +349,10 @@
 				45EEAEF52BB0AF7B007C06B8 /* PhotoSelectionViewController.swift in Sources */,
 				45EEAEF12BB0691F007C06B8 /* ViewController2.swift in Sources */,
 				45EEAEF72BB0DB6D007C06B8 /* GalleryViewController.swift in Sources */,
+				453488952BDE95D700FDB5F9 /* ForgotPasswordController.swift in Sources */,
 				45A2350E2BB038C30010365C /* AppDelegate.swift in Sources */,
+				453488992BDEADBC00FDB5F9 /* WebViewerController.swift in Sources */,
+				453488972BDE961E00FDB5F9 /* RegisterController.swift in Sources */,
 				453488712BCDC55400FDB5F9 /* ImageCollectionViewCell.swift in Sources */,
 				45F1B96A2BB9D7B600747E66 /* PhotoEditingViewController.swift in Sources */,
 				45A235102BB038C30010365C /* SceneDelegate.swift in Sources */,
